@@ -1,4 +1,4 @@
-Config { font = "-gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso8859-1"
+Config { font = "xft:Source Code Pro:size=18"
        , additionalFonts = []
        , borderColor = "#1b2227"
        , border = TopB
