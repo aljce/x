@@ -1,16 +1,46 @@
 #!/bin/sh
-# etc .xinitrc n/a 04/22/2016 ix <arcetera@openmailbox.org>
 
-setroot -t ~/.wall.png
-xrdb < ~/.Xdefaults
-xset +fp $HOME/.fonts fp rehash
-xmodmap ~/.xmodmaprc
-urxvtd -q -o -f
-xbanish &
-sxhkd -c ~/.sxhkdrc &
-xidle -timeout 600 -ne -program /usr/local/bin/slock &
-compton &
-rrun &
-#exec cwm
-#exec dwm
+userresources=$HOME/.Xresources
+usermodmap=$HOME/.Xmodmap
+sysresources=/etc/X11/xinit/.Xresources
+sysmodmap=/etc/X11/xinit/.Xmodmap
+
+# merge in defaults and keymaps
+
+if [ -f $sysresources ]; then
+
+    xrdb -merge $sysresources
+
+fi
+
+if [ -f $sysmodmap ]; then
+    xmodmap $sysmodmap
+fi
+
+if [ -f "$userresources" ]; then
+
+    xrdb -merge "$userresources"
+
+fi
+
+if [ -f "$usermodmap" ]; then
+    xmodmap "$usermodmap"
+fi
+
+# start some nice programs
+
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+ for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+  [ -x "$f" ] && . "$f"
+ done
+ unset f
+fi
+
+#KeyMap: Seems like a hack am i missing some install process
+setxkbmap us
+
+xsetroot -cursor_name left_ptr &
+
+# feh --bg-scale /usr/share/backgrounds/solarized2.jpg &
+
 exec xmonad
