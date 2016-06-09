@@ -1,59 +1,53 @@
-URxvt.scrollBar:    false
-URxvt.font:         xft:Inconsolata:size=20
-URxvt.url-launcher: /usr/bin/firefox
-#define S_base03        #002b36
-#define S_base02        #073642
-#define S_base01        #586e75
-#define S_base00        #657b83
-#define S_base0         #839496
-#define S_base1         #93a1a1
-#define S_base2         #eee8d5
-#define S_base3         #fdf6e3
+! urxvt {{{
+URxvt.internalBorder:  10
+URxvt.loginShell:      true
+! URxvt.cursorUnderline: true
+! }}}
 
-*background:            S_base3
-*foreground:            S_base00
-*fadeColor:             S_base3
-*cursorColor:           S_base01
-*pointerColorBackground:S_base1
-*pointerColorForeground:S_base01
+! globals {{{
+*.scrollBar: false
+! }}}
 
-#define S_yellow        #b58900
-#define S_orange        #cb4b16
-#define S_red           #dc322f
-#define S_magenta       #d33682
-#define S_violet        #6c71c4
-#define S_blue          #268bd2
-#define S_cyan          #2aa198
-#define S_green         #859900
+! fonts {{{
+*.font:     -gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso8859-1
+*.boldFont: -gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso8859-1
+! }}}
 
-!! black dark/light
-*color0:                S_base02
-*color8:                S_base03
+! colors {{{
+! special
+*.foreground:   #7b8695
+*.background:   #1b2227
+*.cursorColor:  #7b8695
 
-!! red dark/light
-*color1:                S_red
-*color9:                S_orange
+! black
+*.color0:       #1b2227
+*.color8:       #374650
 
-!! green dark/light
-*color2:                S_green
-*color10:               S_base01
+! red
+*.color1:       #785561
+*.color9:       #8a6270
 
-!! yellow dark/light
-*color3:                S_yellow
-*color11:               S_base00
+! green
+*.color2:       #58614f
+*.color10:      #6d7762
 
-!! blue dark/light
-*color4:                S_blue
-*color12:               S_base0
+! yellow
+*.color3:       #7e735a
+*.color11:      #8d8063
 
-!! magenta dark/light
-*color5:                S_magenta
-*color13:               S_violet
+! blue
+*.color4:       #424a64
+*.color12:      #626c94
 
-!! cyan dark/light
-*color6:                S_cyan
-*color14:               S_base1
+! orange
+*.color5:       #4d3e4c
+*.color13:      #665064
 
-!! white dark/light
-*color7:                S_base2
-*color15:               S_base3
+! cyan
+*.color6:       #3c5a5d
+*.color14:      #548084
+
+! white
+*.color7:       #7b8695
+*.color15:      #94a1b3
+! }}}
