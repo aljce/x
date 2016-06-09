@@ -11,8 +11,6 @@ URxvt.loginShell:      true
 ! fonts {{{
 *.font:     xft:Source Code Pro:size=20
 *.boldFont: xft:Source Code Pro:bold:size=20
-#*.font:     -gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso8859-1
-#*.boldFont: -gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso8859-1
 ! }}}
 
 ! colors {{{
