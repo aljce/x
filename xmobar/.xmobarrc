@@ -1,28 +1,20 @@
 Config { font = "-gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso8859-1"
-    , additionalFonts = []
-    , borderColor = "#1b2227"
-    , border = TopB
-    , bgColor = "#1b2227"
-    , fgColor = "#7b8695"
-    , alpha = 255
-    , position = Static { xpos = 0, ypos = 0, width = 1600, height = 30 }
-    , textOffset = -1
-    , iconOffset = -1
-    , lowerOnStart = True
-    , pickBroadest = False
-    , persistent = False
-    , hideOnStart = False
-    , iconRoot = "."
-    , allDesktops = True
-    , overrideRedirect = True
-    , commands = [ Run Battery ["-t","AC: <status> Batt: <left>"] 10
-        , Run Com "uname" ["-s","-r"] "" 36000
-        , Run Date "%a %b %_d %Y %H:%M:%S" "date" 1
-        , Run StdinReader
-        ]
-    , sepChar = "%"
-    , alignSep = "}{"
-    , template = " %StdinReader%}{%date% | %battery% | %uname% "
-    }
-
--- vim: set ft=haskell :
+       , additionalFonts = []
+       , borderColor = "#1b2227"
+       , border = TopB
+       , bgColor = "#1b2227"
+       , fgColor = "#7b8695"
+       , alpha = 255
+       , position = Top
+       , textOffset = -1
+       , iconOffset = -1
+       , iconRoot = "."
+       , allDesktops = True
+       , overrideRedirect = True
+       , commands = [ Run Battery ["-t","AC: <status> Batt: <left>"] 10
+                    , Run Com "uname" ["-s","-r"] "" 36000
+                    , Run Date "%a %b %_d %Y %H:%M:%S" "date" 1
+                    , Run StdinReader ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = " %StdinReader%}{%date% | %battery% | %uname% " }
