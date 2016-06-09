@@ -1,10 +1,19 @@
 post_install() {
 	info "Installing Kyle McKean's x config"
-	ln -s 
+	mkdir -p "$HOME/.xmonad"
+	ln -sf "$PEARL_HOME/packages/default/x/xmonad/xmonad.hs" "$HOME/.xmonad/xmonad.hs" 
+	ln -sf "$PEARL_HOME/packages/default/x/xmobar/.xmobarrc" "$HOME/.xmobarrc"
+}
+
+post_update() {
+	post_remove
+	post_install
 }
 
 post_remove() {
 	info "Removing Kyle McKean's x config"
+	rm -rf "$HOME/.xmonad"
+	rm "$HOME/.xmobarrc"
 }
 
 
