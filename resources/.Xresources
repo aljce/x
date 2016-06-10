@@ -9,8 +9,8 @@ URxvt.loginShell:      true
 ! }}}
 
 ! fonts {{{
-*.font:     xft:Source Code Pro:size=20
-*.boldFont: xft:Source Code Pro:bold:size=20
+URxvt.font:     xft:Source Code Pro:size=20
+URxvt.boldFont: xft:Source Code Pro:bold:size=20
 ! }}}
 
 ! colors {{{
