@@ -41,6 +41,6 @@ setxkbmap us
 
 xsetroot -cursor_name left_ptr &
 
-# feh --bg-scale /usr/share/backgrounds/solarized2.jpg &
+feh "$HOME/.wallpaper" &
 
 exec xmonad
