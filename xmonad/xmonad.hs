@@ -26,15 +26,19 @@ myFocusFollowsMouse = True
 -- myClickJustFocuses :: Bool
 -- myClickJustFocuses = False
 
-myBorderWidth = 6
+myBorderWidth = 4
 
 myModMask = mod1Mask
 
 myWorkspaces = ["1: CODE","2: WEB","3: SYS","4: COMM","5: ETC"] ++ map show [6..9]
 
-myNormalBorderColor  = "#93a1a1"
+myNormalBorderColor  = "#7b8695"
 
-myFocusedBorderColor = "#6c71c4"
+myFocusedBorderColor = "#3c5a5d"
+
+myXmobarSelectColor  = "#7e735a"
+
+myXmobarWindowColor  = "#7e735a"
 
 myKeys conf =
   [ ("M-<Return>", spawn (terminal conf))
@@ -81,8 +85,8 @@ myEventHook = mempty
 
 myLogHook xmproc = dynamicLogWithPP xmobarPP
                      { ppOutput = hPutStrLn xmproc
-                     , ppCurrent = xmobarColor "#859900" "" . wrap "[" "]"
-                     , ppTitle = xmobarColor "#808080" "" . shorten 50
+                     , ppCurrent = xmobarColor myXmobarWindowColor "" . wrap "[" "]"
+                     , ppTitle = xmobarColor myXmobarSelectColor "" . shorten 50
                      }
 
 myStartupHook conf= do

@@ -5,6 +5,7 @@ post_install() {
 	ln -sf "$PEARL_HOME/packages/default/x/xmobar/.xmobarrc" "$HOME/.xmobarrc"
 	ln -sf "$PEARL_HOME/packages/default/x/resources/.xinitrc" "$HOME/.xinitrc"
 	ln -sf "$PEARL_HOME/packages/default/x/resources/.Xresources" "$HOME/.Xresources"
+	ln -sf "$PEARL_PKGDIR/backgrounds/selected" "$HOME/.wallpaper"
 }
 
 post_update() {
@@ -18,6 +19,7 @@ post_remove() {
 	rm "$HOME/.xmobarrc"
 	rm "$HOME/.xinitrc"
 	rm "$HOME/.Xresources"
+	rm "$HOME/.wallpaper"
 }
 
 
