@@ -41,6 +41,6 @@ setxkbmap us
 
 xsetroot -cursor_name left_ptr &
 
-feh "$HOME/.wallpaper" &
+feh --bg-scale "$HOME/.wallpaper" &
 
 exec xmonad
