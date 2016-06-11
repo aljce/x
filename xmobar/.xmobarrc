@@ -1,16 +1,8 @@
 Config { font = "xft:Source Code Pro:size=18"
-       , additionalFonts = []
        , borderColor = "#1b2227"
-       , border = TopB
        , bgColor = "#1b2227"
        , fgColor = "#7b8695"
-       , alpha = 255
-       , position = Top
-       , textOffset = -1
-       , iconOffset = -1
-       , iconRoot = "."
-       , allDesktops = True
-       , overrideRedirect = True
+       , overrideRedirect = False
        , commands = [ Run Battery ["-t","AC: <status> Batt: <left>"] 10
                     , Run Com "uname" ["-s","-r"] "" 36000
                     , Run Date "%a %b %_d %Y %H:%M:%S" "date" 1
