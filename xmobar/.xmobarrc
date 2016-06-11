@@ -1,48 +1,48 @@
 Config { font = "xft:Source Code Pro:size=18"
        , additionalFonts = []
-       , borderColor = "#1b2227"
-       , bgColor = "#1b2227"
-       , fgColor = "#7b8695"
+       , bgColor = "#292b2e"
+       , fgColor = "#b2b2b2"
        , alpha = 255
-       -- , position = Top
-       -- , textOffset = 0
-       -- , iconOffset = 0
-       -- , lowerOnStart = False
-       -- , hideOnStart = False
-       -- , allDesktops = True
+       , position = Static { xpos = 0, ypos = 0, width = 3840, height = 50 }
+       , lowerOnStart = False
+       , hideOnStart = False
+       , allDesktops = True
        , overrideRedirect = False
-       -- , persistent = False
-       -- , borderWidth = 5
+       , persistent = False
+       , border = NoBorder
+       , borderColor = "#1b2227"
+       , borderWidth = 5
+       , pickBroadest = False
        , iconRoot = "."
        , commands = [ Run Battery ["-t","AC: <status> Batt: <left>"] 10
                     , Run Date "%a %b %I:%M %P" "date" 1
                     , Run MultiCpu [ "--template" , "Cpu: <autototal>"
                                    , "--Low"      , "10"         
                                    , "--High"     , "50"         
-                                   , "--low"      , "darkgreen"
-                                   , "--normal"   , "darkorange"
-                                   , "--high"     , "darkred"
+                                   , "--low"      , "#2d9574"
+                                   , "--normal"   , "#4f97d7"
+                                   , "--high"     , "#e0211d"
                                    ] 10
                     , Run Battery  [ "--template" , "Batt: <acstatus>"
                                    , "--Low"      , "20"        -- units: %
                                    , "--High"     , "80"        -- units: %
-                                   , "--low"      , "darkred"
-                                   , "--normal"   , "darkorange"
-                                   , "--high"     , "darkgreen"
+                                   , "--low"      , "#e0211d"
+                                   , "--normal"   , "#4f97d7"
+                                   , "--high"     , "#2d9574"
                                    , "--" -- battery specific options
                                             -- discharging status
                                             , "-o"	, "<left>% (<timeleft>)"
                                             -- AC "on" status
                                             , "-O"	, "<fc=#dAA520>Charging</fc>"
                                             -- charged status
-                                            , "-i"	, "<fc=#006000>Charged</fc>"
+                                            , "-i"	, "<fc=#2d9574>Charged</fc>"
                                    ] 50
                     , Run Memory   [ "--template" ,"Mem: <usedratio>%"
                                    , "--Low"      , "15"
                                    , "--High"     , "50"
-                                   , "--low"      , "darkgreen"
-                                   , "--normal"   , "darkorange"
-                                   , "--high"     , "darkred"
+                                   , "--low"      , "#2d9574"
+                                   , "--normal"   , "#4f97d7"
+                                   , "--high"     , "#e0211d"
                                    ] 10
                     , Run StdinReader ]
        , sepChar = "%"

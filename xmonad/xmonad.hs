@@ -32,13 +32,13 @@ myModMask = mod1Mask
 
 myWorkspaces = ["1: CODE","2: WEB","3: SYS","4: COMM","5: ETC"] ++ map show [6..9]
 
-myNormalBorderColor  = "#7b8695"
+myNormalBorderColor  = "#222226"
 
-myFocusedBorderColor = "#3c5a5d"
+myFocusedBorderColor = "#5d4d7a"
 
-myXmobarSelectColor  = "#7e735a"
+myXmobarSelectColor  = "#ce537a"
 
-myXmobarWindowColor  = "#7e735a"
+myXmobarWindowColor  = "#bc6ec5"
 
 myKeys conf =
   [ ("M-<Return>", spawn (terminal conf))
