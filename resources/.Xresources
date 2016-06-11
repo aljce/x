@@ -15,32 +15,32 @@ URxvt.boldFont: xft:Source Code Pro:bold:size=20
 
 ! colors {{{
 ! special
-*.foreground:   #7b8695
-*.background:   #1b2227
-*.cursorColor:  #7b8695
+*.foreground:   #b2b2b2
+*.background:   #292b2e
+*.cursorColor:  #444155
 
 ! black
-*.color0:       #1b2227
-*.color8:       #374650
+*.color0:       #222226
+*.color8:       #5d4d7a
 
 ! red
-*.color1:       #785561
-*.color9:       #8a6270
+*.color1:       #e0211d
+*.color9:       #ce537a
 
 ! green
-*.color2:       #58614f
-*.color10:      #6d7762
+*.color2:       #4f97d7
+*.color10:      #2d9574
 
 ! yellow
-*.color3:       #7e735a
-*.color11:      #8d8063
+*.color3:       #9f8766
+*.color11:      #b1951d
 
 ! blue
-*.color4:       #424a64
-*.color12:      #626c94
+*.color4:       #4f97d7
+*.color12:      #293239
 
 ! orange
-*.color5:       #4d3e4c
+*.color5:       #28def0
 *.color13:      #665064
 
 ! cyan
