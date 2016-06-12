@@ -1,11 +1,11 @@
 post_install() {
 	info "Installing Kyle McKean's x config"
 	mkdir -p "$HOME/.xmonad"
-	ln -sf "$PEARL_HOME/packages/default/x/xmonad/xmonad.hs" "$HOME/.xmonad/xmonad.hs" 
-	ln -sf "$PEARL_HOME/packages/default/x/xmobar/.xmobarrc" "$HOME/.xmobarrc"
-	ln -sf "$PEARL_HOME/packages/default/x/resources/.xinitrc" "$HOME/.xinitrc"
-	ln -sf "$PEARL_HOME/packages/default/x/resources/.Xresources" "$HOME/.Xresources"
-	ln -sf "$PEARL_PKGDIR/backgrounds/selected" "$HOME/.wallpaper"
+	ln -s "$PEARL_PKGDIR/xmonad/xmonad.hs" "$HOME/.xmonad/xmonad.hs" 
+	ln -s "$PEARL_PKGDIR/xmobar/.xmobarrc" "$HOME/.xmobarrc"
+	ln -s "$PEARL_PKGDIR/resources/.xinitrc" "$HOME/.xinitrc"
+	ln -s "$PEARL_PKGDIR/resources/.Xresources" "$HOME/.Xresources"
+	ln -s "$PEARL_PKGDIR/backgrounds/selected" "$HOME/.wallpaper"
 }
 
 post_update() {

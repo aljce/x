@@ -52,7 +52,7 @@ myKeys conf =
   , ("M-S-k", windows W.swapUp)
   , ("M-m",   windows W.focusMaster)
   , ("M-p",   pasteSelection)
-  , ("M-t",   sendMessage ToggleLayout)
+  , ("M-n",   sendMessage NextLayout)
   , ("M-c",   kill)
   , ("M-S-r", spawn "xmonad --recompile; xmonad --restart")
   , ("M-S-q", io exitSuccess)
