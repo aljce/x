@@ -45,7 +45,10 @@ myKeys conf =
   , ("M-r",   spawn "rofi -show run")
   , ("M-f",   spawn"firefox")
   , ("M-e",   spawn "emacs")
-  , ("XF86MonBrightnessDown", spawn "xbacklight -dec 10")
+  , ("<XF86MonBrightnessDown>", spawn "xbacklight -dec 10")
+  , ("<XF86MonBrightnessUp>"  , spawn "xbacklight -inc 10")
+  , ("<XF86AudioLowerVolume>" , spawn "amixer set Master 5%-")
+  , ("<XF86AudioRaiseVolume>" , spawn "amixer set Master 5%+")
   , ("M-j",   windows W.focusDown)
   , ("M-S-j", windows W.swapDown)
   , ("M-k",   windows W.focusUp)
@@ -60,11 +63,10 @@ myKeys conf =
   [("M"++ shf ++ "-" ++ show wsNum, windows (f ws))
   | (ws,wsNum) <- zip (workspaces conf) [1..9]
   , (f ,shf) <- [(W.greedyView,""),(\w -> W.greedyView w . W.shift w ,"-S")]]
-  -- [ ("M-S-s", spawn "sudo pm-suspend")]
 
 myMouseBindings (XConfig {XMonad.modMask = modm}) = M.empty
 
-myLayout = avoidStruts $ minimize (mkToggle (NOBORDERS ?? FULL ?? EOT) (tiled ||| Full))
+myLayout = avoidStruts (mkToggle (NOBORDERS ?? FULL ?? EOT) (tiled ||| Full))
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = gaps [(U,10), (R,10), (L,10), (R,10)] $ spacing 10 $ Tall nmaster delta ratio
@@ -77,7 +79,6 @@ myLayout = avoidStruts $ minimize (mkToggle (NOBORDERS ?? FULL ?? EOT) (tiled ||
 
      -- Percent of screen to increment by when resizing panes
      delta   = 3/100
-
 
 myManageHook = manageDocks
 
