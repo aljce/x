@@ -64,7 +64,7 @@ myKeys conf =
 
 myMouseBindings (XConfig {XMonad.modMask = modm}) = M.empty
 
-myLayout = smartBorders $ avoidStruts $ minimize (mkToggle (NOBORDERS ?? FULL ?? EOT) (tiled ||| Full))
+myLayout = avoidStruts $ minimize (mkToggle (NOBORDERS ?? FULL ?? EOT) (tiled ||| Full))
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = gaps [(U,10), (R,10), (L,10), (R,10)] $ spacing 10 $ Tall nmaster delta ratio
