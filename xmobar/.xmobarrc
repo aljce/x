@@ -31,8 +31,8 @@ Config { font = "xft:Source Code Pro:size=18"
                                    , "--" -- battery specific options
                                             -- discharging status
                                             , "-o"	, "<left>% (<timeleft>)"
-                                            -- AC "on" status
-                                            , "-O"	, "<fc=#dAA520>Charging</fc>"
+                                            -- timeleft "on" status
+                                            , "-O"	, "<fc=#2d9574>Charging</fc>"
                                             -- charged status
                                             , "-i"	, "<fc=#2d9574>Charged</fc>"
                                    ] 50

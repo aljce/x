@@ -60,8 +60,8 @@ myKeys conf =
   , ("M-S-r", spawn "xmonad --recompile; xmonad --restart")
   , ("M-S-q", io exitSuccess)
   ] ++
-  [("M"++ shf ++ "-" ++ show wsNum, windows (f ws))
-  | (ws,wsNum) <- zip (workspaces conf) [1..9]
+  [("M"++ shf ++ "-" ++ [wsId], windows (f ws))
+  | (ws,wsId) <- zip (workspaces conf) "&[{}(=*)+]"
   , (f ,shf) <- [(W.greedyView,""),(\w -> W.greedyView w . W.shift w ,"-S")]]
 
 myMouseBindings (XConfig {XMonad.modMask = modm}) = M.empty

@@ -37,7 +37,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 #KeyMap: Seems like a hack am i missing some install process
-setxkbmap dvorak-programmer
+#setxkbmap -layout us -variant dvp
 
 xsetroot -cursor_name left_ptr &
 
