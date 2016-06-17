@@ -115,5 +115,5 @@ myConfig xmproc = def {
 
 main :: IO ()
 main = do
-  xmproc <- spawnPipe "/home/kyle/.local/bin/xmobar /home/kyle/.xmobarrc"
+  xmproc <- spawnPipe "$(which xmobar) /home/kyle/.xmobarrc"
   xmonad $ myConfig xmproc
